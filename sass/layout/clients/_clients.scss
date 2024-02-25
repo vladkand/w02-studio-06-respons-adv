@@ -1,0 +1,34 @@
+.clients__list {
+   margin-top: 50px;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   column-gap: 30px;
+   row-gap: 15px;
+}
+
+.clients__item {
+   flex-basis: calc(100% / 6 - 30px);
+   flex-grow: 1;
+}
+
+.clients__link {
+   display: flex;
+
+   color: $client-color;
+   border: 1px solid $client-color;
+
+   transition: all $transTemp, scale $transTemp, border-color $transTemp;
+
+   &:focus,
+   &:hover {
+      color: $color-accent;
+      border-color: $color-accent;
+      scale: 1.03;
+   }
+}
+
+.clients__ico {
+   margin: auto;
+   fill: currentColor;
+}

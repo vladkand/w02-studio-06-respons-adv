@@ -1,0 +1,59 @@
+//
+body {
+   color: $color-txt-main;
+   background-color: $bg-main-color;
+   font-family: 'Roboto', sans-serif;
+
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 1.7;
+   letter-spacing: 0.42px;
+}
+
+.section {
+   // mobile ==>
+   padding-top: 60px;
+   padding-bottom: 60px;
+
+   // tablet ==>
+   @media screen and (min-width: 1200px) {
+      padding-top: 94px;
+      padding-bottom: 94px;
+   }
+}
+
+.no-padding {
+   padding-top: 0;
+}
+
+.container {
+   // ==> mobile
+   padding-left: 15px;
+   padding-right: 15px;
+   margin-left: auto;
+   margin-right: auto;
+
+   // mobile
+   @media screen and (max-width: 319px) {
+      width: 280px;
+   }
+
+   @media screen and (min-width: 480px) {
+      width: 480px;
+   }
+
+   // tablet ==>
+   @media screen and (min-width: 768px) {
+      width: 768px;
+      margin-left: auto;
+      margin-right: auto;
+   }
+   // desck
+   @media screen and (min-width: 1200px) {
+      width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+   }
+
+   outline: 1px solid tomato;
+}
