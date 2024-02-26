@@ -542,6 +542,9 @@ body {
 }
 
 .menu-btn {
+  position: fixed;
+  top: 10px;
+  right: 15px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -571,12 +574,15 @@ body {
 
 .menu-container {
   background-color: beige;
-  display: none;
-  -webkit-transform: transliteX(100);
-          transform: transliteX(100);
 }
 @media screen and (max-width: 767px) {
   .menu-container {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: -webkit-transform 200ms linear;
+    transition: -webkit-transform 200ms linear;
+    transition: transform 200ms linear;
+    transition: transform 200ms linear, -webkit-transform 200ms linear;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -598,12 +604,12 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    -webkit-transition: -webkit-transform 500ms linear;
-    transition: -webkit-transform 500ms linear;
-    transition: transform 500ms linear;
-    transition: transform 500ms linear, -webkit-transform 500ms linear;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    -webkit-transition: -webkit-transform 200ms linear;
+    transition: -webkit-transform 200ms linear;
+    transition: transform 200ms linear;
+    transition: transform 200ms linear, -webkit-transform 200ms linear;
   }
 }
 @media screen and (min-width: 768px) {
