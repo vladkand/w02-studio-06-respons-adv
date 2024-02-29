@@ -1,5 +1,5 @@
 .menu-btn {
-   position: fixed;
+   position: absolute;
    top: 10px;
    right: 15px;
    display: inline-flex;
@@ -18,9 +18,15 @@
    & .icon-cross {
       display: none;
    }
+
+   &.is-open {
+      position: fixed;
+   }
+
    &.is-open .icon-cross {
       display: block;
    }
+
    &.is-open .icon-menu {
       display: none;
    }

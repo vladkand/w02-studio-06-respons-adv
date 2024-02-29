@@ -10,6 +10,9 @@ body {
    letter-spacing: 0.42px;
 }
 
+body.modal-open {
+   overflow: hidden;
+}
 .section {
    // mobile ==>
    padding-top: 60px;
