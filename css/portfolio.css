@@ -94,11 +94,6 @@ body.modal-open {
   margin-right: auto;
   outline: 1px solid tomato;
 }
-@media screen and (max-width: 319px) {
-  .container {
-    width: 280px;
-  }
-}
 @media screen and (min-width: 480px) {
   .container {
     width: 480px;
@@ -225,11 +220,11 @@ body.modal-open {
 }
 
 .header {
-  position: relative;
   border-bottom: 2px solid #ececec;
 }
 
 .header__wrapper {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
