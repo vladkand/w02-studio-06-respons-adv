@@ -20,10 +20,12 @@
 @import './layout/header/header';
 @import './layout/header/mobileMenu';
 @import './layout/header/nav';
-@import './layout/header/contact';
+@import './layout/header/contact'; // yes
 @import './layout/hero/hero';
 @import './layout/features/feature';
 @import './layout/works/works';
 @import './layout/team/team';
+
+// ! === не оптимизированы VARs
 // @import './layout/clients/clients';
 // @import './layout/footer/footer';

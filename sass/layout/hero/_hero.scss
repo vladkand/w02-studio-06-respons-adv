@@ -6,7 +6,7 @@
    padding-bottom: 118px;
    text-align: center;
 
-   background-color: $bg-hero-color;
+   background-color: var(--bg-hero-color);
 
    // mobile
    @media screen and (max-width: 319px) {
@@ -41,7 +41,7 @@
    line-height: 1.61; /* 161.538% */
    letter-spacing: 1.56px;
    text-transform: uppercase;
-   color: $color-txt-white;
+   color: var(--color-txt-white);
    // ====================
 
    // pc ==>
@@ -59,6 +59,7 @@
    color: #fff;
 
    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+
    // pc ==>
    @media screen and (min-width: 1200px) {
       padding: 10px 32px;

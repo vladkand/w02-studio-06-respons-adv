@@ -21,9 +21,9 @@
 }
 
 .logo__part--dark {
-   color: $color-logo-dark;
+   color: var(--color-logo-dark);
 }
 
 .logo__part--light {
-   color: $color-logo-white;
+   color: var(--color-logo-white);
 }

@@ -22,10 +22,6 @@
       &:first-child {
          margin-top: 32px;
       }
-
-      // & + & {
-      //    margin-top: 32px;
-      // }
    }
 
    @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -47,7 +43,8 @@
       font-weight: 500;
       line-height: normal;
       letter-spacing: 0.24px;
-      color: $color-txt-main;
+
+      color: var(--color-txt-main);
 
       &.contact_tel {
          font-size: 34px;
@@ -66,7 +63,7 @@
       font-weight: 500;
       line-height: normal;
       letter-spacing: 0.24px;
-      color: $color-txt-main;
+      color: var(--color-txt-main);
    }
 
    @media screen and (min-width: 1200px) {
@@ -76,11 +73,11 @@
       letter-spacing: 0.28px;
    }
 
-   transition: color 500ms $cubic-function;
+   transition: var(--transTemp);
 
    &:focus,
    &:hover {
-      color: $color-accent;
+      color: var(--color-accent);
    }
 }
 

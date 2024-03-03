@@ -13,7 +13,8 @@
 // !===============================
 
 :root {
-   --color-accent: #2196f3;
+   // --color-accent: #2196f3;
+   --color-accent: red;
    --color-txt-main: #757575;
    --color-txt-second: #212121;
    --color-txt-white: #ffffff;
@@ -51,7 +52,9 @@
    --border-input: rgba(33, 33, 33, 0.2);
 
    // BTN-COLOR
-   --btn-active-color: #188ce8;
+   // --btn-active-color: #188ce8;
+   --btn-active-color: teal;
+
    --btn-overlay-color: rgba(33, 150, 243, 0.9);
    --btn-close-border-color: rgba(0, 0, 0, 0.1);
    --btn-close-ico-color: #000000;
@@ -60,5 +63,7 @@
    //
    --cubic-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-   --transTemp: 500ms $cubic-function;
+   // --transTemp: 500ms $cubic-function;
+
+   --transTemp: 2500ms var(--cubic-function);
 }

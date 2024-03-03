@@ -40,7 +40,7 @@
    opacity: 0.3;
    scale: 0.8;
 
-   transition: all 500ms $cubic-function;
+   transition: all var(--transTemp);
 
    // &:hover {
    //    opacity: 1;
@@ -55,7 +55,7 @@
    width: 100%;
    height: 70px;
    padding-top: 27px;
-   color: $color-txt-white;
+   color: var(--color-txt-white);
 
    text-align: center;
 

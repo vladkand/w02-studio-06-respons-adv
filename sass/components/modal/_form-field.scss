@@ -26,8 +26,8 @@
    flex-direction: column;
 
    &:activ {
-      outline-color: $color-accent;
-      border-color: $color-accent;
+      outline-color: var(--color-accent);
+      border-color: var(--color-accent);
    }
 }
 
@@ -35,14 +35,14 @@
    height: 40px;
    padding-left: 42px;
 
-   border: 1px solid $border-input;
+   border: 1px solid var(--border-input);
    border-radius: 4px;
 
-   color: $color-txt-main;
+   color: var(--color-txt-main);
 
    &:hover {
       cursor: pointer;
-      border-color: $color-accent;
+      border-color: var(--color-accent);
    }
 }
 
@@ -54,10 +54,10 @@
    height: 18px;
 
    transform: translateY(-50%);
-   fill: $color-txt-second;
+   fill: var(--color-txt-second);
 
    .form__input:hover ~ & {
-      fill: $color-accent;
+      fill: var(--color-accent);
    }
 }
 
@@ -67,13 +67,13 @@
    left: 42px;
    transform: translateY(-50%);
 
-   color: $color-txt-main;
+   color: var(--color-txt-main);
 
    font-size: 12px;
    line-height: normal;
    letter-spacing: 0.12px;
 
-   transition: transform $transTemp;
+   transition: transform var(--transTemp);
 
    // .form__input:hover ~ &,
    .form__input:focus ~ &,
@@ -94,7 +94,7 @@
    top: 25px;
    left: 16px;
 
-   transition: transform $transTemp;
+   transition: transform var(--transTemp);
 
    // .form__input:hover ~ &,
    .form__input:focus ~ &,
@@ -123,7 +123,7 @@
    width: 16px;
    height: 15px;
 
-   border: 2px solid $color-txt-second;
+   border: 2px solid var(--color-txt-second);
    border-radius: 2px;
 
    background-image: url('../images/full-check.svg');
@@ -132,16 +132,16 @@
    background-origin: border-box;
 
    .check__input:focus + & {
-      border: 2px solid $color-accent;
+      border: 2px solid var(--color-accent);
 
       // outline: 3px solid #000;
-      outline: 3px solid $color-txt-second;
+      outline: 3px solid var(--color-txt-second);
    }
 
    .check__input:checked + & {
-      border-color: $color-accent;
+      border-color: var(--color-accent);
       border-radius: 2px;
-      background-color: $color-accent;
+      background-color: var(--color-accent);
    }
 }
 
@@ -150,7 +150,7 @@
 }
 
 .check__link {
-   color: $color-accent;
+   color: var(--color-accent);
    text-decoration: underline;
    // text-underline-offset: 4px;
    text-decoration-skip-ink: none;

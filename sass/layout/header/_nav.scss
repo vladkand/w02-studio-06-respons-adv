@@ -30,7 +30,7 @@
       font-size: 40px;
       line-height: normal;
       letter-spacing: 0.28px;
-      color: $color-txt-second;
+      color: var(--color-txt-second);
    }
 
    @media screen and (min-width: 768px) {
@@ -43,13 +43,13 @@
       font-weight: 500;
       line-height: normal;
       letter-spacing: 0.28px;
-      color: $color-txt-second;
+      color: var(--color-txt-second);
    }
 
-   transition: color 250ms $cubic-function;
+   transition: var(--transTemp);
 
    &.current {
-      color: $color-accent;
+      color: var(--color-accent);
    }
 
    &.current:after {
@@ -63,12 +63,12 @@
          height: 4px;
 
          border-radius: 2px;
-         background-color: $color-accent;
+         background-color: var(--color-accent);
       }
    }
 
    &:focus,
    &:hover {
-      color: $color-accent;
+      color: var(--color-accent);
    }
 }

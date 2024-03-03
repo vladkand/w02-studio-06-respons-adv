@@ -12,7 +12,7 @@
    & .social__link {
       color: #ffffff;
 
-      background-color: $social-color-dark;
+      background-color: var(--social-color-dark);
    }
 }
 
@@ -27,14 +27,14 @@
    height: 44px;
    border-radius: 50%;
 
-   color: $social-color;
+   color: var(--social-color);
 
-   transition: all $transTemp;
+   transition: all var(--transTemp);
 
    &:focus,
    &:hover {
-      color: $color-txt-white;
-      background-color: $color-accent;
+      color: var(--color-txt-white);
+      background-color: var(--color-accent);
    }
 
    // outline: 1px solid;

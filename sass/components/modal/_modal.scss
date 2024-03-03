@@ -33,21 +33,23 @@
    width: 30px;
    height: 30px;
 
-   background-color: $bg-main-color;
-   border: 1px solid $btn-close-border-color;
+   background-color: var(--bg-main-color);
+   border: 1px solid var(--btn-close-border-color);
    border-radius: 50%;
 
    cursor: pointer;
-   color: $btn-close-ico-color;
+   color: var(--btn-close-ico-color);
 }
 
 .close__ico {
    fill: currentColor;
    margin: auto;
 
+   transition: var(--transTemp);
+
    .modal__btn:active &,
    .modal__btn:focus &,
    .modal__btn:hover & {
-      fill: $color-accent;
+      fill: var(--color-accent);
    }
 }
