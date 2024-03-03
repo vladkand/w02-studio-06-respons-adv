@@ -1,29 +1,53 @@
-.clients__list {
-   margin-top: 50px;
+.clients__list,
+.card-set {
    display: flex;
    flex-wrap: wrap;
-   justify-content: space-between;
-   column-gap: 30px;
-   row-gap: 15px;
+   // --card-item: 2;
+
+   @media screen and (min-width: 320px) {
+      --card-item: 2;
+   }
+
+   margin-left: -30px;
+   margin-top: -30px;
+
+   @media screen and (min-width: 768px) {
+      --card-item: 3;
+   }
+
+   @media screen and (min-width: 1200px) {
+      --card-item: 6;
+   }
 }
 
-.clients__item {
-   flex-basis: calc(100% / 6 - 30px);
-   flex-grow: 1;
+// @media screen and (min-width: 768px) {
+//    display: flex;
+//    flex-wrap: wrap;
+//    justify-content: space-between;
+// }
+
+.card-set__item {
+   flex-basis: calc(100% / var(--card-item) - 30px);
+
+   margin-left: 30px;
+   margin-top: 30px;
+   flex-shrink: 0;
 }
 
 .clients__link {
    display: flex;
+   height: 92px;
 
-   color: $client-color;
-   border: 1px solid $client-color;
+   color: var(--client-color);
+   border: 1px solid var(--client-color);
 
-   transition: all $transTemp, scale $transTemp, border-color $transTemp;
+   transition: color var(--transTemp), scale 100ms var(--cubic-function),
+      border-color var(--transTemp);
 
    &:focus,
    &:hover {
-      color: $color-accent;
-      border-color: $color-accent;
+      color: var(--color-accent);
+      border-color: var(--color-accent);
       scale: 1.03;
    }
 }

@@ -66,4 +66,7 @@
    // --transTemp: 500ms $cubic-function;
 
    --transTemp: 2500ms var(--cubic-function);
+
+   // Количество элементов
+   --card-item: 1;
 }
