@@ -1187,9 +1187,9 @@ body.modal-open {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
@@ -1200,9 +1200,6 @@ body.modal-open {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
@@ -1210,8 +1207,9 @@ body.modal-open {
 }
 
 @media screen and (max-width: 767px) {
-  .footer__item + .footer__item {
+  .footer__item {
     margin-top: 60px;
+    outline: 1px solid yellow;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1253,7 +1251,6 @@ body.modal-open {
 }
 
 .footer__subscribe {
-  margin-top: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1264,17 +1261,17 @@ body.modal-open {
 }
 @media screen and (min-width: 768px) {
   .footer__subscribe {
-    margin-left: auto;
     margin-top: 60px;
     display: inline-block;
   }
 }
 @media screen and (min-width: 1200px) {
   .footer__subscribe {
-    margin-top: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    margin-left: auto;
+    margin-top: 0;
   }
 }
 
@@ -1301,7 +1298,6 @@ body.modal-open {
 }
 
 .subscribe__input {
-  min-width: 450px;
   -ms-flex-item-align: stretch;
       align-self: stretch;
   padding: 15px 16px;
@@ -1311,6 +1307,11 @@ body.modal-open {
   background-color: #2f303a;
   -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+@media screen and (min-width: 768px) {
+  .subscribe__input {
+    min-width: 450px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .subscribe__input {
