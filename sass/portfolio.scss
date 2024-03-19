@@ -1,5 +1,6 @@
 //
 @import './utils/variables';
+@import './utils/vars';
 @import './base/reset';
 @import './utils/mixin';
 @import './utils/hidden';
@@ -9,12 +10,18 @@
 @import './components/btn';
 @import './components/fonts';
 @import './components/logo';
+@import './components/card-set';
 @import './components/social';
+
+@import './components/modal/backdrop';
+@import './components/modal/modal';
+@import './components/modal/form-field';
 
 // === LAYOUT ===
 @import './layout/header/header';
+@import './layout/header/mobileMenu';
 @import './layout/header/nav';
-@import './layout/header/contact';
+@import './layout/header/contact'; // yes
 @import './layout/portfolio/filter';
 @import './layout/portfolio/examples';
 @import './layout/footer/footer';
