@@ -101,6 +101,7 @@ button {
 }
 
 body {
+  min-width: 240px;
   color: var(--color-txt-main);
   background-color: var(--bg-main-color);
   font-family: "Roboto", sans-serif;
@@ -582,7 +583,7 @@ body.modal-open {
   display: none;
 }
 .menu-btn.is-open {
-  position: fixed;
+  position: absolute;
 }
 .menu-btn.is-open .icon-cross {
   display: block;
@@ -598,15 +599,21 @@ body.modal-open {
 
 .menu-container {
   background-color: beige;
+  width: 100%;
+  height: 100%;
+  padding-top: 48px;
+  padding-left: 40px;
+  padding-bottom: 48px;
+  z-index: 5;
 }
 @media screen and (max-width: 767px) {
   .menu-container {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-    -webkit-transition: -webkit-transform 200ms linear;
-    transition: -webkit-transform 200ms linear;
-    transition: transform 200ms linear;
-    transition: transform 200ms linear, -webkit-transform 200ms linear;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -614,27 +621,21 @@ body.modal-open {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding-top: 48px;
-    padding-left: 40px;
-    padding-bottom: 48px;
-    z-index: 5;
-  }
-  .menu-container.is-open {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
     -webkit-transition: -webkit-transform 200ms linear;
     transition: -webkit-transform 200ms linear;
     transition: transform 200ms linear;
     transition: transform 200ms linear, -webkit-transform 200ms linear;
   }
+}
+.menu-container.is-open {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  -webkit-transition: -webkit-transform 200ms linear;
+  transition: -webkit-transform 200ms linear;
+  transition: transform 200ms linear;
+  transition: transform 200ms linear, -webkit-transform 200ms linear;
 }
 @media screen and (min-width: 768px) {
   .menu-container {
@@ -839,11 +840,6 @@ body.modal-open {
   text-align: center;
   background-color: var(--bg-hero-color);
   background-size: contain;
-}
-@media screen and (max-width: 319px) {
-  .hero {
-    max-width: 280px;
-  }
 }
 @media screen and (min-width: 1200px) {
   .hero {
