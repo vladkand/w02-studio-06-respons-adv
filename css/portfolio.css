@@ -838,11 +838,30 @@ body.modal-open {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
   margin-left: -8px;
   margin-top: -15px;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 768px) {
+  .filter {
+    margin-bottom: 30px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .filter {
+    margin-bottom: 50px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .filter {
+    margin-bottom: 50px;
+  }
 }
 
 .filter__item {
@@ -878,9 +897,6 @@ body.modal-open {
           box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
 }
 
-.portfolio__list {
-  margin-top: 50px;
-}
 @media screen and (min-width: 768px) {
   .portfolio__list {
     --card-item: 2;
@@ -888,18 +904,26 @@ body.modal-open {
 }
 @media screen and (min-width: 1200px) {
   .portfolio__list {
-    --card-item: 4;
+    --card-item: 3;
   }
 }
 
 .examples__item {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .examples__link {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  position: relative;
 }
 
 .examples__thumb {
@@ -934,6 +958,9 @@ body.modal-open {
 
 .examples__dscr {
   padding: 20px 24px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   border: 1px solid #eeeeee;
   border-top: none;
 }

@@ -6,9 +6,24 @@
 .filter {
    display: flex;
    flex-wrap: wrap;
-   justify-content: center;
+   justify-content: start;
    margin-left: -8px;
    margin-top: -15px;
+   margin-bottom: 40px;
+
+   @media screen and (min-width: 768px) {
+      margin-bottom: 30px;
+
+      justify-content: center;
+   }
+
+   @media screen and (min-width: 1200px) {
+      margin-bottom: 50px;
+   }
+
+   @media screen and (min-width: 1200px) {
+      margin-bottom: 50px;
+   }
 }
 
 .filter__item {
