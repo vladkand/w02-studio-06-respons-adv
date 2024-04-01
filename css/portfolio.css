@@ -34,7 +34,7 @@
   --color-txt-addres: rgba(255, 255, 255, 0.6);
   --bg-main-color: #ffffff;
   --bg-second-color: #f5f4fa;
-  --bg-hero-color: #9e8b8b;
+  --bg-hero-color: #c;
   --bg-footer-color: #2f303a;
   --bg-modal: #ffffff;
   --bg-backdrop: rgba(0, 0, 0, 0.2);
@@ -307,7 +307,57 @@ body.modal-open {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 528px;
+  width: 450px;
+  padding: 40px;
+  -webkit-transform: translate(-50%, -50%) scale(1) rotateZ(0deg);
+          transform: translate(-50%, -50%) scale(1) rotateZ(0deg);
+  background-color: #ffffff;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  -webkit-transition: -webkit-transform 350ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 350ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 350ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 350ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 350ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: #fff;
+  outline: 1px solid red;
+}
+.backdrop.is-hidden .modal {
+  -webkit-transform: translate(-50%, -50%) scale(0) rotateZ(360deg);
+          transform: translate(-50%, -50%) scale(0) rotateZ(360deg);
+}
+
+.modal__btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 30px;
+  height: 30px;
+  background-color: var(--bg-main-color);
+  border: 1px solid var(--btn-close-border-color);
+  border-radius: 50%;
+  cursor: pointer;
+  color: var(--btn-close-ico-color);
+}
+
+.close__ico {
+  fill: currentColor;
+  margin: auto;
+  -webkit-transition: var(--transTemp);
+  transition: var(--transTemp);
+}
+.modal__btn:active .close__ico, .modal__btn:focus .close__ico, .modal__btn:hover .close__ico {
+  fill: var(--color-accent);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 450px;
   padding: 40px;
   -webkit-transform: translate(-50%, -50%) scale(1) rotateZ(0deg);
           transform: translate(-50%, -50%) scale(1) rotateZ(0deg);
