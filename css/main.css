@@ -841,22 +841,40 @@ body.modal-open {
   background-size: cover;
   background-position: center;
 }
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 0, 0, 0.2)), to(rgba(0, 0, 255, 0.1))), url(../images/hero/hero-bg-mob@2x.jpg);
+    background-image: linear-gradient(to right, rgba(255, 0, 0, 0.2), rgba(0, 0, 255, 0.1)), url(../images/hero/hero-bg-mob@2x.jpg);
+  }
+}
 @media screen and (min-width: 768px) {
   .hero {
     padding-top: 118px;
     padding-bottom: 118px;
-    background-image: url(../images/hero/Hero-bg-tabl.jpg);
-    background-size: cover;
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 0, 0, 0.2)), to(rgba(0, 0, 255, 0.1))), url(../images/hero/hero-bg-tabl.jpg);
+    background-image: linear-gradient(to right, rgba(255, 0, 0, 0.2), rgba(0, 0, 255, 0.1)), url(../images/hero/hero-bg-tabl.jpg);
+  }
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 0, 0, 0.2)), to(rgba(0, 0, 255, 0.1))), url(../images/hero/hero-bg-tabl@2x.jpg);
+    background-image: linear-gradient(to right, rgba(255, 0, 0, 0.2), rgba(0, 0, 255, 0.1)), url(../images/hero/hero-bg-tabl@2x.jpg);
   }
 }
 @media screen and (min-width: 1200px) {
   .hero {
     padding-top: 200px;
     padding-bottom: 200px;
-    width: 1600px;
-    height: 600px;
-    background-image: url(../images/hero/hero-bg-pc.jpg);
-    background-size: cover;
+    max-width: 1600px;
+    max-height: 600px;
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 0, 0, 0.2)), to(rgba(0, 0, 255, 0.1))), url(../images/hero/hero-bg-pc.jpg);
+    background-image: linear-gradient(to right, rgba(255, 0, 0, 0.2), rgba(0, 0, 255, 0.1)), url(../images/hero/hero-bg-pc.jpg);
+  }
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 0, 0, 0.2)), to(rgba(0, 0, 255, 0.1))), url(../images/hero/hero-bg-pc@2x.jpg);
+    background-image: linear-gradient(to right, rgba(255, 0, 0, 0.2), rgba(0, 0, 255, 0.1)), url(../images/hero/hero-bg-pc@2x.jpg);
   }
 }
 
