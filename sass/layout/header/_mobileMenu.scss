@@ -20,8 +20,8 @@
    }
 
    &.is-open {
-      // position: fixed;
-      position: absolute;
+      position: fixed;
+      // position: absolute;
    }
 
    &.is-open .icon-cross {

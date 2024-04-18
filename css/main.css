@@ -579,7 +579,7 @@ body.modal-open {
   display: none;
 }
 .menu-btn.is-open {
-  position: absolute;
+  position: fixed;
 }
 .menu-btn.is-open .icon-cross {
   display: block;
