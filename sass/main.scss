@@ -1,8 +1,10 @@
 //
+@import './base/reset';
 @import './utils/variables';
 @import './utils/vars';
-@import './base/reset';
-@import './utils/mixin';
+@import './utils/vars-for-mixin';
+@import './utils/mixin/mixin';
+@import './utils/mixin/breakpoints';
 @import './utils/hidden';
 
 // ===COMPONENT ===

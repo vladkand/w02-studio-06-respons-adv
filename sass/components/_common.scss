@@ -32,23 +32,29 @@ body.modal-open {
 
 .container {
    // ==> mobile
+   width: 100%;
+
    padding-left: 15px;
    padding-right: 15px;
    margin-left: auto;
    margin-right: auto;
 
-   @media screen and (min-width: 480px) {
+   // === From mixin
+   @include respond-to(mobile) {
       width: 480px;
+      outline: 1px solid green;
    }
 
-   // tablet ==>
-   @media screen and (min-width: 768px) {
+   @include respond-to(tablet) {
       width: 768px;
-   }
-   // desck
-   @media screen and (min-width: 1200px) {
-      width: 1200px;
+      outline: 1px solid blue;
    }
 
-   outline: 1px solid tomato;
+   // desck
+   @include respond-to(desktop) {
+      width: 1200px;
+      outline: 1px solid tomato;
+   }
+
+   // outline: 1px solid tomato;
 }
