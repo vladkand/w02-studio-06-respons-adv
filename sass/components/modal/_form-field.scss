@@ -120,6 +120,7 @@
 
 .check__svg {
    display: inline-flex;
+   flex-shrink: 0;
    width: 16px;
    height: 15px;
 
@@ -147,6 +148,10 @@
 
 .check__txt {
    margin-left: 8px;
+
+   @include respond-to(tablet-max) {
+      font-size: 12px;
+   }
 }
 
 .check__link {
@@ -159,5 +164,9 @@
 // === BUTTON-SUBMIT ===
 .form__btn {
    margin-top: 30px;
-   padding: 10px 52px;
+   padding: 10px 20px;
+
+   @include respond-to(mobile-min) {
+      padding: 10px 52px;
+   }
 }

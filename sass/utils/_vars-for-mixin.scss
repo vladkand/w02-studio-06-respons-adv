@@ -1,6 +1,11 @@
 //
 
 $breakpoints: (
+   // @include respond-to(mobile-min)
+   'mobile-min':
+      (
+         min-width: 320px,
+      ),
    // @include respond-to(mobile)
    'mobile':
       (
@@ -19,7 +24,7 @@ $breakpoints: (
    // @include respond-to(tablet-max)
    'tablet-max':
       (
-         max-width: 767px,
+         max-width: 1199px,
       ),
 
    // @include respond-to(desktop)

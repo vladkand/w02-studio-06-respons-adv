@@ -24,9 +24,10 @@
 
    pointer-events: none;
 }
-// .backdrop.is-hidden .modal {
-//    transform: translate(-50%, -50%) scale(0) rotateX(-900deg);
-// }
+
+.backdrop.is-hidden .modal {
+   transform: translate(-50%, -50%) scale(0) rotateX(-900deg);
+}
 
 // ===== Styles for MODAL =====
 .modal {
@@ -34,8 +35,8 @@
    top: 50%;
    left: 50%;
 
-   width: 450px;
-   // height: 609px;
+   width: calc(100% - 30px);
+   max-width: 450px;
 
    // width: 528px;
    padding: 40px;
@@ -58,6 +59,11 @@
    background-color: #fff;
 
    outline: 1px solid red;
+
+   // @include respond-to(desktop)
+   @include respond-to(desktop) {
+      max-width: 528px;
+   }
 }
 
 .modal__btn {

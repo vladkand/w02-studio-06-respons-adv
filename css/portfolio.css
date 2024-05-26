@@ -302,11 +302,17 @@ body.modal-open {
   pointer-events: none;
 }
 
+.backdrop.is-hidden .modal {
+  -webkit-transform: translate(-50%, -50%) scale(0) rotateX(-900deg);
+          transform: translate(-50%, -50%) scale(0) rotateX(-900deg);
+}
+
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 450px;
+  width: calc(100% - 30px);
+  max-width: 450px;
   padding: 40px;
   -webkit-transform: translate(-50%, -50%) scale(1) rotateZ(0deg);
           transform: translate(-50%, -50%) scale(1) rotateZ(0deg);
@@ -324,6 +330,11 @@ body.modal-open {
 .backdrop.is-hidden .modal {
   -webkit-transform: translate(-50%, -50%) scale(0) rotateZ(360deg);
           transform: translate(-50%, -50%) scale(0) rotateZ(360deg);
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    max-width: 528px;
+  }
 }
 
 .modal__btn {
@@ -353,10 +364,10 @@ body.modal-open {
 }
 
 .modal {
+  background-color: antiquewhite;
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 450px;
   padding: 40px;
   -webkit-transform: translate(-50%, -50%) scale(1) rotateZ(0deg);
           transform: translate(-50%, -50%) scale(1) rotateZ(0deg);
@@ -541,6 +552,8 @@ body.modal-open {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   width: 16px;
   height: 15px;
   border: 2px solid var(--color-txt-second);
@@ -563,6 +576,11 @@ body.modal-open {
 .check__txt {
   margin-left: 8px;
 }
+@media screen and (max-width: 1199px) {
+  .check__txt {
+    font-size: 12px;
+  }
+}
 
 .check__link {
   color: var(--color-accent);
@@ -573,7 +591,12 @@ body.modal-open {
 
 .form__btn {
   margin-top: 30px;
-  padding: 10px 52px;
+  padding: 10px 20px;
+}
+@media screen and (min-width: 320px) {
+  .form__btn {
+    padding: 10px 52px;
+  }
 }
 
 .header {
